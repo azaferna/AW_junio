@@ -9,3 +9,19 @@ window.onload = function cargarEnumeradoColores(){
 		$("#comboBox").append(string);
 	}
 };
+
+window.onload = function cargarNotas(){
+	$.get("../html/cargarNotas.php", function (data, status){
+		mostrarNotas(data);
+	});
+}
+
+function mostrarNotas(notas){
+	for (var i = 0; i < notas.length; i=i+6) {
+		string=" <span>Titulo</span><p>"+notas[i+2]+"</p>" +
+		"<span>Color</span><p>"+notas[i+4]+"</p>";
+
+		$("#listaNotas").append(string);
+	}
+
+}

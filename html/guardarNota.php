@@ -11,7 +11,7 @@
 	 $DBconnection = mysqli_connect('127.0.0.1','root','','examen'); //Lleva a error  or die ();
 	 /*id de la nota cargando numero de notas del usuarioX*/
 
-	 $sql = "INSERT INTO `notas`(`idnota`, `iduser`, `titulo`, `contenido`, `color`, `rutaimg`) VALUES ('1','".$_SESSION['nick']."
+	 $sql = "INSERT INTO `notas`(`idnota`, `iduser`, `titulo`, `contenido`, `color`, `rutaimg`) VALUES ('2','".$_SESSION['nick']."
 	 ','".$titulo."','".$texto."','".$color."','abc' )";
 
 	 $query = mysqli_query($DBconnection, $sql);
